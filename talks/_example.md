@@ -1,6 +1,7 @@
 ---
-title: "Innovative AI Technologies"
-labels: "AI, Innovation"
+title: "Example Title"
+labels: "topic1, topic2"
+year: 1989
 ---
 
 # Title
