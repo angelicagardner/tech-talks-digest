@@ -14,10 +14,6 @@ year: 1989
 - `00:00` - 
 - `00:00` - 
 
-## Official Abstract/Summary
-
-> 
-
 ## Key Takeaways
 
 - 
@@ -28,7 +24,7 @@ year: 1989
 - 
 - 
 
-## Relevant Links/Resources
+## Links/Resources
 
 - 
 - 
