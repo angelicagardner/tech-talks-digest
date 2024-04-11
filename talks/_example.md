@@ -1,4 +1,9 @@
-# Tech Talk Title
+---
+title: "Innovative AI Technologies"
+labels: "AI, Innovation"
+---
+
+# Title
 
 **Speaker(s):** 
 **Video URL:** 
