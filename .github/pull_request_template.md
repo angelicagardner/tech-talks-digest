@@ -1,5 +1,8 @@
 # Tech Talk Title
 
+Mention any related issues here, using the syntax `#issue_number`. For example:
+- This PR closes #123.
+
 **Speaker(s):** 
 **Video URL:** 
 
