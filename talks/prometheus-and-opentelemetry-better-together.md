@@ -7,7 +7,9 @@ year: 2024
 # Prometheus and OpenTelemetry: Better Together
 
 **Speaker(s):** Adriana Villela, Reese Lee
+
 **Video URL:** https://www.youtube.com/watch?v=LJd1pJ0k28g
+
 **Summary:** Prometheus is used for monitoring and alerting while OpenTelemetry provides a broader observability framework including metrics, traces, and logs. This talk centers on how these tools complement each other.
 
 ## Timestamps
