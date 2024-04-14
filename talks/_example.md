@@ -7,16 +7,15 @@ year: 1989
 # Title
 
 **Speaker(s):** 
+
 **Video URL:** 
+
+**Summary:**
 
 ## Timestamps
 
 - `00:00` - 
 - `00:00` - 
-
-## Official Abstract/Summary
-
-> 
 
 ## Key Takeaways
 
@@ -28,7 +27,7 @@ year: 1989
 - 
 - 
 
-## Relevant Links/Resources
+## Links/Resources
 
 - 
 - 
