@@ -7,7 +7,10 @@ year: 1989
 # Title
 
 **Speaker(s):** 
+
 **Video URL:** 
+
+**Summary:**
 
 ## Timestamps
 
