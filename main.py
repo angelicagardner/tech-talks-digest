@@ -10,7 +10,7 @@ def generate_table_rows(talks_directory):
                 title = post.metadata.get('title', 'No Title')
                 year = post.metadata.get('year', '')
                 labels = post.metadata.get('labels', '')
-                rows.append(f'<tr data-labels="{labels}"><td><a href="https://github.com/angelicagardner/tech-talks-digest/talks/{filename}">{title}</a></td><td>{labels}</td></tr>')
+                rows.append(f'<tr data-labels="{labels}"><td><a href="https://github.com/angelicagardner/tech-talks-digest/blob/main/talks/{filename}">{title}</a></td><td>{labels}</td></tr>')
     return '\n'.join(rows)
 
 def update_html_with_table_rows(table_rows):
