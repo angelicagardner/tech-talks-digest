@@ -14,8 +14,13 @@ year: 2021
 
 ## Timestamps
 
-- `00:00` - 
-- `00:00` - 
+- `00:00` - Introduction to the Talk and Presenter
+- `02:05` - Simple example of tool use case
+- `03:30` - Examples of YAML validation tools: yq, yamllint.
+- `05:35` - Examples of Kubernetes validation tools: kubeval.
+- `10:15` - Support for Custom Resources
+- `11:05` - Introducing Kubeconform, high-performing Kubernetes manifest validation tool with CRD support
+- `13:00` - Kubeconform Pros and Cons
 
 ## Key Takeaways
 
@@ -29,5 +34,4 @@ year: 2021
 
 ## Links/Resources
 
-- 
-- 
+- [Kubernetes manifest validation tool. Incorporate it into your CI, or use it locally to validate your Kubernetes configuration](https://github.com/yannh/kubeconform) 
