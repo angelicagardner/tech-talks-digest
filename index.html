@@ -1,32 +1,31 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Tech Talks Digest</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta name="description" content="Insights, summaries, and key takeaways from various tech talks. Includes timestamps for quick reference and video links for deeper exploration.">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<title>Tech Talks Digest</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Insights, summaries, and key takeaways from various tech talks. Includes timestamps for quick reference and video links for deeper exploration." name="description"/>
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <h1>Tech Talks Digest</h1>
-  <p>List of finished talks.</p>
-  <select id="labelFilter">
-    <option value="all">All Labels</option>
-    <!-- Options will be added here by the JS script -->
-  </select>
-  <table id="talksTable">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Labels</th>
-        <th>Year</th>
-      </tr>
-    </thead>
-    <tbody>
-        <!-- This tbody will be dynamically filled by the Python script -->
-    </tbody>
-  </table>     
-  <script src="script.js"></script>
+<h1>Tech Talks Digest</h1>
+<p>List of finished talks.</p>
+<select id="labelFilter">
+<option value="all">All Labels</option>
+<!-- Options will be added here by the JS script -->
+</select>
+<table id="talksTable">
+<thead>
+<tr>
+<th>Title</th>
+<th>Labels</th>
+<th>Year</th>
+</tr>
+</thead>
+<tbody><tr data-labels="gitops, kubernetes"><td><a href="https://github.com/angelicagardner/tech-talks-digest/blob/main/talks/ensuring-kubernetes-manifests-validity-compliance.md">Ensuring Kubernetes manifests validity &amp; compliance</a></td><td>gitops, kubernetes</td><td>2021</td></tr><tr data-labels="observability, opentelemetry, prometheus"><td><a href="https://github.com/angelicagardner/tech-talks-digest/blob/main/talks/prometheus-and-opentelemetry-better-together.md">Prometheus and OpenTelemetry: Better Together</a></td><td>observability, opentelemetry, prometheus</td><td>2024</td></tr></tbody>
+</table>
+<script src="script.js"></script>
 </body>
 </html>
