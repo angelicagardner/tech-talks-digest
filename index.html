@@ -13,17 +13,18 @@
   <p>List of finished talks.</p>
   <select id="labelFilter">
     <option value="all">All Labels</option>
-    <!-- Options will be added here by the script -->
+    <!-- Options will be added here by the JS script -->
   </select>
   <table id="talksTable">
     <thead>
       <tr>
         <th>Title</th>
         <th>Labels</th>
+        <th>Year</th>
       </tr>
     </thead>
     <tbody>
-        <tr data-labels="observability, opentelemetry, prometheus"><td><a href="https://github.com/angelicagardner/tech-talks-digest/talks/prometheus-and-opentelemetry-better-together.md">Prometheus and OpenTelemetry: Better Together</a></td><td>observability, opentelemetry, prometheus</td></tr>
+        <!-- This tbody will be dynamically filled by the Python script -->
     </tbody>
   </table>     
   <script src="script.js"></script>
