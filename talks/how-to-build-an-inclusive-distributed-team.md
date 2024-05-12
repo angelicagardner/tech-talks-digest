@@ -1,6 +1,6 @@
 ---
 title: "How to Build an Inclusive Distributed Team"
-labels: "teamwork, inclusion, remote"
+labels: "teamwork, inclusive, distributed"
 year: 2018
 ---
 
