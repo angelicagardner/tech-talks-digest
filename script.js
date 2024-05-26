@@ -28,6 +28,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function sortTable() {
+        tableRows.sort((rowA, rowB) => {
+            const yearA = parseInt(rowA.querySelector('td:nth-child(3)').textContent);
+            const yearB = parseInt(rowB.querySelector('td:nth-child(3)').textContent);
+            return yearA - yearB;
+        });
+        // Remove existing rows
+        while (tbody.firstChild) {
+            tbody.removeChild(tbody.firstChild);
+        }
+        // Append sorted rows
+        tableRows.forEach(row => tbody.appendChild(row));
+    }
+
     populateFilterOptions();
+    sortTable();
     labelFilter.addEventListener('change', filterTable);
 });
