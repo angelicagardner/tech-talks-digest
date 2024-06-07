@@ -19,15 +19,12 @@ year: 1989
 
 ## Key Takeaways
 
-- 
-- 
+- ...
 
-### Questions/Discussion Points**
+### Questions/Discussion Points
 
-- 
-- 
+- ...
 
 ## Links/Resources
 
-- 
-- 
+- ...
