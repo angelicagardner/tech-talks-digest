@@ -29,7 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function sortTable() {
-        tableRows.sort((rowA, rowB) => {
+        const tbody = document.querySelector('#talksTable tbody');
+        const tableRowsArray = Array.from(tableRows);
+        tableRowsArray.sort((rowA, rowB) => {
             const yearA = parseInt(rowA.querySelector('td:nth-child(3)').textContent);
             const yearB = parseInt(rowB.querySelector('td:nth-child(3)').textContent);
             return yearA - yearB;
@@ -39,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
             tbody.removeChild(tbody.firstChild);
         }
         // Append sorted rows
-        tableRows.forEach(row => tbody.appendChild(row));
+        tableRowsArray.forEach(row => tbody.appendChild(row));
     }
 
     populateFilterOptions();
