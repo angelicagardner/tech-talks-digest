@@ -15,18 +15,21 @@ jobs:
       with:
         ref: main
 
+    - name: Fetch all branches
+      run: git fetch origin "+refs/heads/*:refs/remotes/origin/*"
+    
+    - name: Checkout dev branch
+      run: git checkout dev
+
     - name: Setup Git
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-    
-    - name: Checkout dev branch
-      run: |
-        git checkout dev
-        git rebase main
+
+    - name: Rebase dev onto main
+      run: git rebase main
     
     - name: Push changes
-      run: |
-        git push origin dev --force
+      run: git push origin dev --force
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
