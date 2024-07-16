@@ -10,7 +10,7 @@ year: 2024
 
 **Video URL:** https://www.youtube.com/watch?v=r6qb3OivFyQ
 
-**Summary:**
+**Summary:** The talk explains the challenges of observability in serverless environments, such as the transient nature of instances. To address these issues, Google introduced sidecars in Cloud Run to run alongside main containers for collecting telemetry data, and they implemented lifecycle dependencies to ensure proper telemetry collection during startup and shutdown. Adjustments were also made to support both push-based (e.g., OpenTelemetry) and pull-based (e.g., Prometheus) telemetry systems in serverless environments.
 
 ## Timestamps
 
@@ -29,7 +29,9 @@ year: 2024
 
 ## Key Takeaways
 
-- ...
+- Traditional monitoring tools face difficulties due to the ephemeral nature of serverless instances.
+- Google introduced sidecars and lifecycle dependencies in Cloud Run to improve observability.
+- Ongoing efforts include reducing resource overhead and addressing CPU throttling issues.
 
 ### Questions/Discussion Points
 
