@@ -1,18 +1,20 @@
 import frontmatter
+import markdown2
 import os
 from bs4 import BeautifulSoup
+from jinja2 import Environment, FileSystemLoader
 
-def generate_table_rows(talks_directory):
+def generate_table_rows(talks_dir):
     rows = []
-    for filename in os.listdir(talks_directory):
+    for filename in os.listdir(talks_dir):
         if filename.endswith(".md") and not filename.startswith("_"):
-            filepath = os.path.join(talks_directory, filename)
+            filepath = os.path.join(talks_dir, filename)
             with open(filepath, 'r') as f:
                 post = frontmatter.load(f)
                 title = post.metadata.get('title', 'No Title')
                 year = post.metadata.get('year', '')
                 labels = post.metadata.get('labels', '')
-                row_html = f'<tr data-labels="{labels}"><td><a href="https://github.com/angelicagardner/tech-talks-digest/blob/main/talks/{filename}">{title}</a></td><td>{labels}</td><td>{year}</td></tr>'
+                row_html = f'<tr data-labels="{labels}"><td><a href="talks/html/{filename.replace(".md", ".html")}">{title}</a></td><td>{labels}</td><td>{year}</td></tr>'
                 rows.append(row_html)
     return rows
 
@@ -27,8 +29,43 @@ def update_html_with_table_rows(html_file_path, rows):
     with open(html_file_path, 'w', encoding='utf-8') as file:
         file.write(str(soup))
 
+def generate_talk_pages(talks_dir, template_path, output_dir):
+    env = Environment(loader=FileSystemLoader('.'))
+    template = env.get_template(template_path)
+
+    for filename in os.listdir(talks_dir):
+        if filename.endswith(".md") and not filename.startswith("_"):
+            filepath = os.path.join(talks_dir, filename)
+            with open(filepath, 'r') as f:
+                post = frontmatter.load(f)
+                title = post.metadata.get('title', 'No Title')
+                year = post.metadata.get('year', '')
+                labels = post.metadata.get('labels', '').split(', ')
+                summary = post.content.split('\n')[0]
+                markdown_content = post.content
+                html_content = markdown2.markdown(markdown_content)
+
+                rendered_html = template.render(
+                    title=title,
+                    year=year,
+                    labels=labels,
+                    summary=summary,
+                    content=html_content,
+                )
+
+                output_filename = filename.replace('.md', '.html')
+                output_path = os.path.join(output_dir, output_filename)
+                os.makedirs(output_dir, exist_ok=True)
+                with open(output_path, 'w', encoding='utf-8') as out_file:
+                    out_file.write(rendered_html)
+
 if __name__ == "__main__":
-    talks_directory = './talks'
+    talks_dir = './talks'
     html_file_path = 'index.html'
-    rows = generate_table_rows(talks_directory)
+    template_path = 'template.html'
+    talks_output_dir = talks_dir + '/html'
+
+    rows = generate_table_rows(talks_dir)
     update_html_with_table_rows(html_file_path, rows)
+
+    generate_talk_pages(talks_dir, template_path, talks_output_dir)
