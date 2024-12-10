@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         tableRowsArray.sort((rowA, rowB) => {
             const yearA = parseInt(rowA.querySelector('td:nth-child(3)').textContent);
             const yearB = parseInt(rowB.querySelector('td:nth-child(3)').textContent);
-            return yearA - yearB;
+            return yearB - yearA;
         });
         // Remove existing rows
         while (tbody.firstChild) {
