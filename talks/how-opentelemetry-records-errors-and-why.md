@@ -14,7 +14,11 @@ year: 2024
 
 ## Timestamps
 
-- `00:00` - 
+- `00:00` - Introduction to the Speakers
+- `01:45` - Table of Contents for the Talk
+- `02:30` - Background on why we need a standardized way to capture telemetry and errors
+- `03:50` - Errors vs Exceptions
+- `05:15` - Error Handling in OTel
 - `00:00` - 
 
 ## Key Takeaways
