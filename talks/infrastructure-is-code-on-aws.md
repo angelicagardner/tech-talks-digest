@@ -14,7 +14,12 @@ year: 2024
 
 ## Timestamps
 
-- `00:00` - 
+- `00:00` - Introduction and Agenda for the talk
+- `01:15` - What is Infrastructure as Code?
+- `06:10` - Introduction to the speaker
+- `07:25` - AWS CloudFormation (IaC)
+- `10:25` - Cloud Formation Registry
+- `12:25` - AWS Serverless Application Model (SAM)
 - `00:00` - 
 
 ## Key Takeaways
