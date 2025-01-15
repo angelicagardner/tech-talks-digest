@@ -27,16 +27,16 @@ year: 2024
 
 ## Key Takeaways
 
-- Adopt IaC from the beginning to manage cloud resources efficiently and ease maintenance as your infrastructure grows.
-- Prefer declarative over imperative approaches, use declarative IaC methods where you specify what infrastructure you need rather than how to create it.
-- Integrate IaC with CI/CD Pipelines: Incorporate IaC into continuous integration and continuous deployment pipelines to automate deployments, enforce consistency, and enable rapid iterations.
-- CloudFormation (tool): The original AWS IaC tool using YAML/JSON, offering support for over 490 resource types. It includes the CloudFormation Registry for custom resources.
-- SAM (framework): Simplifies deploying serverless applications by building on CloudFormation, providing easy local testing and streamlined deployment processes.
-- CDK (framework): Allows defining infrastructure using familiar programming languages (TypeScript, Python, Java), offering higher-level abstractions through constructs and design patterns.
-- Terraform (tool): A versatile IaC tool by HashiCorp using HCL (HashiCorp Configuration Language), known for its multi-cloud capabilities and state management features. It integrates with CDK for enhanced functionality.
-- Best Practices for IaC are:
-    - Layer your applications by separating different components into distinct stacks (e.g., infrastructure, security, backend, frontend).
-    - Avoid hardcoding secrets, utilize AWS Secrets Manager, Parameter Store, or HashiCorp Vault.
-    - Use parameters and mappings to design templates to be flexible and reusable across multiple environments (production, staging, development).
-    - Incorporate testing practices such as syntax checking, linting, snapshot tests, and integration tests to validate configurations before deployment.
-    - Store IaC templates in version-controlled repositories and conduct peer reviews to maintain code quality and consistency.
+- Start using Infrastructure as Code (IaC) from the beginning to manage cloud resources efficiently, simplify scaling, and ensure maintainability as infrastructure grows.
+- Use declarative IaC methods where you define the desired state of your infrastructure (what you need), rather than detailing the steps to create it (how to achieve it).
+- Incorporate IaC into Continuous Integration and Continuous Deployment (CI/CD) pipelines to automate infrastructure deployments, enforce consistency, and enable faster iterations.
+- CloudFormation (Tool): AWS's native IaC tool using YAML/JSON to define infrastructure. It supports over 490 resource types and allows custom resources through the CloudFormation Registry.
+- SAM (Framework): Built on CloudFormation, SAM simplifies serverless application deployment, offering local testing capabilities and streamlined deployment workflows.
+- CDK (Framework): Enables defining cloud infrastructure using familiar programming languages (TypeScript, Python, Java, etc.). Provides high-level abstractions (constructs) and reusable design patterns.
+- Terraform (Tool): A widely used, multi-cloud IaC tool by HashiCorp. Uses HCL (HashiCorp Configuration Language) for configuration and offers powerful state management. It integrates with CDK for additional functionality.
+- Best Practices for IaC:
+    - Organize your applications by separating components into distinct stacks or modules (e.g., infrastructure, security, backend, frontend).
+    - Avoid hardcoding sensitive data. Use tools like AWS Secrets Manager, Parameter Store, or HashiCorp Vault to securely manage secrets.
+    - Design templates using parameters and mappings to enable flexibility and reuse across environments (production, staging, development).
+    - Adopt testing practices such as syntax checking, linting, snapshot tests, and integration tests to validate configurations before deployment.
+    - Store IaC templates in version-controlled repositories (e.g., Git). Conduct peer reviews to ensure code quality, consistency, and adherence to best practices.
