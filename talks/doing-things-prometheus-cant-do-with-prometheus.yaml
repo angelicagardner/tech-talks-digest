@@ -16,11 +16,14 @@ year: 2019
 
 - `00:00` - Introduction to Speaker and Talk
 - `03:00` - Introduction to Prometheus and Metrics
+- `04:20` - Good observability doesnt come for free
+- `06:40` - The limitations of Prometheus
 - `00:00` - ...
 
 ## Key Takeaways
 
-- ...
+- Observability requires time, effort, and understanding — there are no shortcuts
+- Metrics, logs, and traces must be designed into systems, not added as afterthoughts
 
 ### Questions/Discussion Points
 
