@@ -34,7 +34,7 @@ year: 2019
 - Metrics, logs, and traces must be designed into systems, not added as afterthoughts
 - Prometheus is not a distributed system and can get resource spikes from bad queries, if you run out of CPU/memory you can slow down the instance to the point that it gets unresponsive, and you might end up with a gap when querying later because the server had been put in a situation where it couldnt get out and scrape metrics. It also wont evaluate any alerts.
 - For HA Prometheus, use replicas of Prometheus to avoid data gaps during failures and put a reverse proxy (e.g., promxy or Thanos Query) in front of replicas to fan out queries and deduplicate data. Be aware of increased latency and operational overhead with these proxies.
-- For metrics; 
+- For metrics;
     - Use Prometheus configuration limits;
     - Avoid unbounded label values;
     - Limit label combinations to reduce cardinality;
