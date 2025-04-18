@@ -1,0 +1,31 @@
+---
+title: "Doing Things Prometheus Can’t Do with Prometheus"
+labels: "observability, prometheus"
+year: 2019
+---
+
+# Doing Things Prometheus Can’t Do with Prometheus
+
+**Speaker(s):** Tim Simmons, DigitalOcean
+
+**Video URL:** https://youtu.be/pRmnh8lgjsU
+
+**Summary:** This talk is about exploring how Prometheus can handle more than expected when used skillfully. The speaker emphasizes that good observability isn’t about fancy tools but about investing time to understand them and he encourages treating observability as critical infrastructure to make thoughtful, informed decisions - that is the way we get the most out of Prometheus.
+
+## Timestamps
+
+- `00:00` - Introduction to Speaker and Talk
+- `03:00` - Introduction to Prometheus and Metrics
+- `00:00` - ...
+
+## Key Takeaways
+
+- ...
+
+### Questions/Discussion Points
+
+- ...
+
+## Links/Resources
+
+- ...
