@@ -17,6 +17,13 @@ The talks are displayed on a GitHub Pages site that contains a table linking to 
 3. **Open a Pull Request**: Once the summary is ready, a pull request can be created and merged to the main branch. It's important to mention the associated issue using `#issue_number` format in the pull request - this will trigger a workflow that adds the same issue labels to the PR.
 4. **GitHub Actions**: The merged changes will trigger a Workflow that updates the webpage so the new talk is added to the table.
 
+## Channels to look for recorded talks
+
+- [CNCF Cloud Native Computing Foundation](https://www.youtube.com/@cncf)
+- [GopherCon UK](https://www.youtube.com/@GopherConUK)
+- [GOTO Conferences](https://www.youtube.com/@GOTO-)
+- [PyCon US](https://www.youtube.com/@PyConUS)
+
 ---
 
  Welcome to Tech Talks Digest: Unearthing Insights from the Industry!
