@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>What Is This OpenTelemetry Thing?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# What Is This OpenTelemetry Thing?" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Tech Talks Digest</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>What Is This OpenTelemetry Thing?</h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">observability</span>, 
+                
+                <span class="label">opentelemetry</span>
+                
+            </p>
+            <div class="content">
+                <h1>What Is This OpenTelemetry Thing?</h1>
+
+<p><strong>Speaker(s):</strong> Martin Thwaites - Principle Developer Advocate at Honeycomb</p>
+
+<p><strong>Video URL:</strong> https://youtu.be/jC1icupHlMs</p>
+
+<p><strong>Summary:</strong> OpenTelemetry is a tool to help achieve observability, and the standard for vendor-agnostic telemetry signal emission. The speaker explains what OpenTelemetry is, describes its core signals (traces, logs, metrics) as well as the concepts propagation and baggage. We also get information about methods to integrate opentelemetry into applications and what is the difference between head and tail sampling to balance observability needs and costs.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction to Observability.</li>
+<li><code>02:15</code> - Metrics was the primary tool for monitoring production systems in 2000.</li>
+<li><code>03:15</code> - In 2012-2013 we shifted to time-series databases that stored metric data points with associated labels, enabling queries. Also, tools emerged for managing log data for deeper insights.</li>
+<li><code>06:45</code> - By 2017, modern observability emerged with more complex systems and distributed architecture, requiring tools for distributed tracing to enable real-time insights into interconnected systems function. The tools operated under different, incompatible standards - collaboration emerged to create a unified standard: OpenTelemetry.</li>
+<li><code>08:50</code> - What is OpenTelemetry?</li>
+<li><code>14:00</code> - What is a Trace?</li>
+<li><code>18:30</code> - What is a Log?</li>
+<li><code>20:20</code> - What is a Metric?</li>
+<li><code>24:00</code> - Propagation (The Real Magic)</li>
+<li><code>25:00</code> - Baggage</li>
+<li><code>27:30</code> - How-to integrate OpenTelemetry into applications</li>
+<li><code>38:20</code> - Sampling</li>
+<li><code>43:00</code> - What's coming?</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>OpenTelemetry has become the number one project from CNCF, surpassing Kubernetes in adoption. It is the de facto standard for emitting telemetry signals from applications, enabling vendor-agnostic observability.</li>
+<li>The OpenTelemetry Protocol (OTLP) defines the data model and API contracts. It supports 11 programming languages and focuses on traces, metrics, and logs as core observability signals.</li>
+<li>There are no pillars in OpenTelemetry, there are signals (representing different types of data). Core signals are: Traces, Metrics, Logs.</li>
+<li>Traces provide causality (what caused what) and performance insights for debugging. They consist of spans which are structured data blobs with attributes like IDs, timestamps, and causality information. Traces allow for visualizations like waterfalls and service graphs.</li>
+<li>Logs are point-in-time data (happening right now) intended for humans (the message-template part), used for debugging issues. Logs lack causality but can be structured and are useful in capturing application state. Logs are (unfortunately) more easy to do badly.</li>
+<li>Metrics are time-series aggregates (data point with associated labels, we have the data points in buckets), useful for tracking patterns like error rates or latency distributions. They are cost-effective and fast for querying but lack deep context and are best for low cardinality/dimensionality.</li>
+<li>propagation enables distributed systems to share context by transmitting state across requests. It uses the W3C Trace Context Specification. Sampling within propagation helps optimize performance by determining which traces are retained.</li>
+<li>Baggage in OpenTelemetry allows transmitting additional context between services to influence tracing data without altering the API contract. E.g. a user ID can be added to baggage and used for spans or logs. It is part of the W3C baggage specification. While powerful, it poses significant risks as baggage propagates across all HTTP calls, including third-party APIs. Misuse, such as transmitting sensitive data like social security numbers, can lead to severe security and privacy concerns.</li>
+<li>Methods for integrating OpenTelemetry into applications: auto-instrumentation (no code changes, uses agents), coded instrumentation (add custom spans and context for precise/intentional telemetry data, e.g. in app startup), OTel Collector (processing and forwarding telemetry data to backend, provides centralized config, secure egress, redaction/filtering and enrichment).</li>
+<li>Sampling is a technique offering observability without drowning in data (and costs). Sampling strategies include head and tail sampling. Head sampling decides whether to capture the data before processing starts (more efficient but lacks detailed context) and tail sampling makes the decision after processing so it can use detailed info, but it incurs delays and increases memory usage.</li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>

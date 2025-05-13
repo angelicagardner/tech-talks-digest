@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Doing Things Prometheus Can’t Do with Prometheus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Doing Things Prometheus Can’t Do with Prometheus" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Tech Talks Digest</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Doing Things Prometheus Can’t Do with Prometheus</h2>
+            <p><strong>Year:</strong> 2019</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">observability</span>, 
+                
+                <span class="label">prometheus</span>
+                
+            </p>
+            <div class="content">
+                <h1>Doing Things Prometheus Can’t Do with Prometheus</h1>
+
+<p><strong>Speaker(s):</strong> Tim Simmons, DigitalOcean</p>
+
+<p><strong>Video URL:</strong> https://youtu.be/pRmnh8lgjsU</p>
+
+<p><strong>Summary:</strong> This talk is about exploring how Prometheus can handle more than expected when used skillfully. The speaker emphasizes that good observability isn’t about fancy tools but about investing time to understand them and he encourages treating observability as critical infrastructure to make thoughtful, informed decisions - that is the way we get the most out of Prometheus.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction to Speaker and Talk</li>
+<li><code>03:00</code> - Introduction to Prometheus and Metrics</li>
+<li><code>04:20</code> - Good observability doesnt come for free</li>
+<li><code>06:40</code> - The limitations of Prometheus</li>
+<li><code>09:20</code> - High Availability Prometheus</li>
+<li><code>13:45</code> - Prometheus Metrics Best Practices</li>
+<li><code>19:55</code> - Example of how to craft a metric to match desired outcome</li>
+<li><code>21:05</code> - Prometheus Longterm Storge</li>
+<li><code>24:10</code> - Machine Learning on Metrics</li>
+<li><code>27:20</code> - Exporters &amp; Custom Metrics</li>
+<li><code>29:25</code> - Alert Manager Best Practices</li>
+<li><code>31:00</code> - Observability Culture with SLOs (Service Level Objectives)</li>
+<li><code>34:45</code> - Conclusion</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>Observability requires time, effort, and understanding — there are no shortcuts</li>
+<li>Metrics, logs, and traces must be designed into systems, not added as afterthoughts</li>
+<li>Prometheus is not a distributed system and can get resource spikes from bad queries, if you run out of CPU/memory you can slow down the instance to the point that it gets unresponsive, and you might end up with a gap when querying later because the server had been put in a situation where it couldnt get out and scrape metrics. It also wont evaluate any alerts.</li>
+<li>For HA Prometheus, use replicas of Prometheus to avoid data gaps during failures and put a reverse proxy (e.g., promxy or Thanos Query) in front of replicas to fan out queries and deduplicate data. Be aware of increased latency and operational overhead with these proxies.</li>
+<li>For metrics;
+<ul>
+<li>Use Prometheus configuration limits;</li>
+<li>Avoid unbounded label values;</li>
+<li>Limit label combinations to reduce cardinality;</li>
+<li>Shard/federate Prometheus instances for scalability; and</li>
+<li>Use separate metrics for different levels of granularity (endpoint, API version, global).</li>
+</ul></li>
+<li>Exporters should use "ConstMetrics" pattern to avoid stale metric issues from ephemeral values. Centralize and standardize custom exporters to replace ad-hoc monitoring scripts.</li>
+<li>Group and route alerts smartly (e.g., critical to pager, debug to Slack). Maintain alert context and write playbooks to act on alerts.</li>
+</ul>
+
+<h3>Questions/Discussion Points</h3>
+
+<ul>
+<li>This talk is from 2019 and now in 2025 with the launch of Prometheus 3.x, some limitations mentioned have been improved. E.g. better query performance, support for native histograms (for better cardinality handling), and more efficient long-term storage with block eviction. However, Prometheus is still not a distributed system and HA setups still require external tools.</li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>

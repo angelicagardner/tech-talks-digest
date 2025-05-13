@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Ensuring Kubernetes manifests validity & compliance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Ensuring Kubernetes manifests validity & compliance - a tooling overview" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Tech Talks Digest</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Ensuring Kubernetes manifests validity & compliance</h2>
+            <p><strong>Year:</strong> 2021</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">gitops</span>, 
+                
+                <span class="label">kubernetes</span>
+                
+            </p>
+            <div class="content">
+                <h1>Ensuring Kubernetes manifests validity &amp; compliance - a tooling overview</h1>
+
+<p><strong>Speaker(s):</strong> Yann Hamon</p>
+
+<p><strong>Video URL:</strong> https://youtu.be/YM7Wy_M7Lvw?si=NI2HioRxrRpyZpMa</p>
+
+<p><strong>Summary:</strong> In this talk, the speaker emphasizes the importance of validating Kubernetes manifests to ensure they adhere to official Kubernetes schemas and best practices. We're introduced to several tools that help with difference levels of such validation, and the speaker presents his own tool Kubeconform.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction to the Talk and Presenter</li>
+<li><code>02:05</code> - Simple example of tool use case</li>
+<li><code>03:30</code> - Examples of YAML validation tools: yq, yamllint.</li>
+<li><code>05:35</code> - Examples of Kubernetes validation tools: kubeval.</li>
+<li><code>10:15</code> - Support for Custom Resources</li>
+<li><code>11:05</code> - Introducing Kubeconform, high-performing Kubernetes manifest validation tool with CRD support</li>
+<li><code>13:00</code> - Kubeconform Pros and Cons</li>
+<li><code>13:55</code> - Client-side validation with kubectl</li>
+<li><code>16:45</code> - Conform to best practices and/or policies: conftest, kubesec (security testing of manifests), kube-score, kube-linter, kubetest.</li>
+<li><code>24:05</code> - Learnings from the tooling overview</li>
+<li><code>28:40</code> - Summary and what you should use</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>Validation is important =&gt; reduce runtime issues and improve reliability.</li>
+<li>Tools exist on different levels, from YAML correctness to k8s compliance, best practices and security policies.</li>
+<li>Such validation tools help to handle compliance to new k8s versions and features.</li>
+<li>Adopt a layered approach: start with YAML validation, move to k8s schema compliance and then apply custom policies for security and best practices.</li>
+<li>YAML linter should be used in dev environment to catch formatting errors directly; and then</li>
+<li>Integrate k8s validation tools in CI/CD pipelines.</li>
+</ul>
+
+<h3>Questions/Discussion Points</h3>
+
+<ul>
+<li>Alternatives for when working with Helm: plugins for kubeval and conftest. (not Kubeconform yet)</li>
+</ul>
+
+<h2>Links/Resources</h2>
+
+<ul>
+<li><a href="https://github.com/yannh/kubeconform">Kubernetes manifest validation tool. Incorporate it into your CI, or use it locally to validate your Kubernetes configuration</a></li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Monitoring Serverless Workloads with OpenTelemetry and Prometheus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Monitoring Serverless Workloads with OpenTelemetry and Prometheus" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Tech Talks Digest</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Monitoring Serverless Workloads with OpenTelemetry and Prometheus</h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">cloud native</span>, 
+                
+                <span class="label">monitoring</span>, 
+                
+                <span class="label">observability</span>, 
+                
+                <span class="label">opentelemetry</span>, 
+                
+                <span class="label">prometheus</span>, 
+                
+                <span class="label">serverless</span>
+                
+            </p>
+            <div class="content">
+                <h1>Monitoring Serverless Workloads with OpenTelemetry and Prometheus</h1>
+
+<p><strong>Speaker(s):</strong> Ridwan Sharif, Google</p>
+
+<p><strong>Video URL:</strong> https://www.youtube.com/watch?v=r6qb3OivFyQ</p>
+
+<p><strong>Summary:</strong> The talk explains the challenges of observability in serverless environments, such as the transient nature of instances. To address these issues, Google introduced sidecars in Cloud Run to run alongside main containers for collecting telemetry data, and they implemented lifecycle dependencies to ensure proper telemetry collection during startup and shutdown. Adjustments were also made to support both push-based (e.g., OpenTelemetry) and pull-based (e.g., Prometheus) telemetry systems in serverless environments.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction and Agenda</li>
+<li><code>02:00</code> - Focus on Serverless</li>
+<li><code>05:00</code> - Serverless Observability (O11y)</li>
+<li><code>07:25</code> - Problem: serverless instances are expected to be short-lived</li>
+<li><code>08:20</code> - Problem: the need to normalize cumulative metrics</li>
+<li><code>08:50</code> - Problem: prometheus-based scraping expect metrics to be pulled</li>
+<li><code>10:45</code> - Problem: need more control of how to configure collections</li>
+<li><code>11:40</code> - Cloud Run infrastructure changes needed to accommodate o11y</li>
+<li><code>14:35</code> - Adjustments needed for push-based OpenTelemetry Protocol (OTLP) ingest</li>
+<li><code>15:05</code> - Adjustments needed for pull-based ingest (Prometheus metrics)</li>
+<li><code>17:25</code> - How the productionize (deploy and configure) the collectors</li>
+<li><code>19:00</code> - Next steps</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>Traditional monitoring tools face difficulties due to the ephemeral nature of serverless instances.</li>
+<li>Google introduced sidecars and lifecycle dependencies in Cloud Run to improve observability.</li>
+<li>Ongoing efforts include reducing resource overhead and addressing CPU throttling issues.</li>
+</ul>
+
+<h3>Questions/Discussion Points</h3>
+
+<ul>
+<li>These were the changes done in Cloud Run to accommodate o11y - what about other serverless services?</li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>

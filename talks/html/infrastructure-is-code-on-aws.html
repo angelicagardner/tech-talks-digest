@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Infrastructure IS Code on AWS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Infrastructure IS Code on AWS" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Tech Talks Digest</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Infrastructure IS Code on AWS</h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">aws</span>, 
+                
+                <span class="label">infrastructure</span>
+                
+            </p>
+            <div class="content">
+                <h1>Infrastructure IS Code on AWS</h1>
+
+<p><strong>Speaker(s):</strong> Darko Mesaroš - Developer Advocate at AWS</p>
+
+<p><strong>Video URL:</strong> https://youtu.be/r4VT6ktLQm4?si=l1mIxs84gl8ZytED</p>
+
+<p><strong>Summary:</strong> The talk emphasizes the importance of Infrastructure as Code (IaC) on AWS, highlighting various frameworks like CloudFormation, SAM, CDK, and Terraform. The speaker explains the differences between imperative and declarative IaC approaches and demonstrates how modern tools simplify the deployment and management of complex infrastructures. Additionally, the talk outlines best practices for implementing IaC, including layering applications, separating stacks, avoiding hardcoded secrets, and thoroughly testing configurations.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction and Agenda for the talk</li>
+<li><code>01:15</code> - What is Infrastructure as Code?</li>
+<li><code>06:10</code> - Introduction to the speaker</li>
+<li><code>07:25</code> - AWS CloudFormation (IaC)</li>
+<li><code>10:25</code> - Cloud Formation Registry</li>
+<li><code>12:25</code> - AWS Serverless Application Model (SAM)</li>
+<li><code>17:25</code> - AWS Cloud Development Kit</li>
+<li><code>23:30</code> - Testing demo</li>
+<li><code>29:50</code> - Terraform</li>
+<li><code>32:20</code> - Best Practices</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>Start using Infrastructure as Code (IaC) from the beginning to manage cloud resources efficiently, simplify scaling, and ensure maintainability as infrastructure grows.</li>
+<li>Use declarative IaC methods where you define the desired state of your infrastructure (what you need), rather than detailing the steps to create it (how to achieve it).</li>
+<li>Incorporate IaC into Continuous Integration and Continuous Deployment (CI/CD) pipelines to automate infrastructure deployments, enforce consistency, and enable faster iterations.</li>
+<li>CloudFormation (Tool): AWS's native IaC tool using YAML/JSON to define infrastructure. It supports over 490 resource types and allows custom resources through the CloudFormation Registry.</li>
+<li>SAM (Framework): Built on CloudFormation, SAM simplifies serverless application deployment, offering local testing capabilities and streamlined deployment workflows.</li>
+<li>CDK (Framework): Enables defining cloud infrastructure using familiar programming languages (TypeScript, Python, Java, etc.). Provides high-level abstractions (constructs) and reusable design patterns.</li>
+<li>Terraform (Tool): A widely used, multi-cloud IaC tool by HashiCorp. Uses HCL (HashiCorp Configuration Language) for configuration and offers powerful state management. It integrates with CDK for additional functionality.</li>
+<li>Best Practices for IaC:
+<ul>
+<li>Organize your applications by separating components into distinct stacks or modules (e.g., infrastructure, security, backend, frontend).</li>
+<li>Avoid hardcoding sensitive data. Use tools like AWS Secrets Manager, Parameter Store, or HashiCorp Vault to securely manage secrets.</li>
+<li>Design templates using parameters and mappings to enable flexibility and reuse across environments (production, staging, development).</li>
+<li>Adopt testing practices such as syntax checking, linting, snapshot tests, and integration tests to validate configurations before deployment.</li>
+<li>Store IaC templates in version-controlled repositories (e.g., Git). Conduct peer reviews to ensure code quality, consistency, and adherence to best practices.</li>
+</ul></li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
