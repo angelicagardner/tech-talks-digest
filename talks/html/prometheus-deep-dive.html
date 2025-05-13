@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Prometheus Deep Dive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Prometheus Deep Dive" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Tech Talks Digest</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Prometheus Deep Dive</h2>
+            <p><strong>Year:</strong> 2019</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">prometheus</span>, 
+                
+                <span class="label">observability</span>
+                
+            </p>
+            <div class="content">
+                <h1>Prometheus Deep Dive</h1>
+
+<p><strong>Speaker(s):</strong> Ben Kochie</p>
+
+<p><strong>Video URL:</strong> https://youtu.be/Me-kZi4xkEs</p>
+
+<p><strong>Summary:</strong> This talk delved into the design choices of Prometheus monitoring system architecture, and best practices and recommendations for data collection and scaling strategies. The speaker also showcased some recent enhancements (although this was in 2019). </p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction to Speaker and Prometheus</li>
+<li><code>02:25</code> - Prometheus Design</li>
+<li><code>04:40</code> - Prometheus Data Collection</li>
+<li><code>10:10</code> - Scaling Strategies</li>
+<li><code>13:40</code> - Q&amp;A: Prometheus' Storage</li>
+<li><code>16:10</code> - Q&amp;A: Retroactively Evaluating Recording Rules</li>
+<li><code>17:25</code> - Q&amp;A: Experience with Thanos</li>
+<li><code>22:20</code> - Q&amp;A: Facing Problems with Prometheus</li>
+<li><code>23:25</code> - Q&amp;A: Application-specific Metrics</li>
+<li><code>25:50</code> - Q&amp;A: Vertical Compaction</li>
+<li><code>27:10</code> - Q&amp;A: Prometheus Web Interface</li>
+<li><code>28:30</code> - Q&amp;A: TSDB Sizing</li>
+<li><code>29:10</code> - Q&amp;A: Config Management</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>Prometheus is designed to be the most reliable component on the network by minimizing dependencies and running locally. This way, Prometheus maintains visibility even if external network dependencies fail. The Write-Ahead log ensures data reliability during operations and restarts and the immutability of the time series database prevents data corruption.</li>
+<li>Prometheus should be deployed close to the targets to ensure accurate monitoring without relying on broader network stability.</li>
+<li>Vertically scale Prometheus instances before considering horizontal scaling, e.g. for 1,000-pods or similarly large deployments should split Prometheus instances based on services to enhance manageability and performance.</li>
+<li>Take capacity planning seriously, e.g. a server handling 100,000 samples/second requires planning behind how to manage storage and processing.</li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>

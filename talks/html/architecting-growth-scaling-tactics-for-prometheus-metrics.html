@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Architecting Growth: Scaling Tactics for Prometheus Metrics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Architecting Growth: Scaling Tactics for Prometheus Metrics" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Tech Talks Digest</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Architecting Growth: Scaling Tactics for Prometheus Metrics</h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">observability</span>, 
+                
+                <span class="label">prometheus</span>, 
+                
+                <span class="label">monitoring</span>
+                
+            </p>
+            <div class="content">
+                <h1>Architecting Growth: Scaling Tactics for Prometheus Metrics</h1>
+
+<p><strong>Speaker(s):</strong> Arthur Silva Sens &amp; Nicolas Takashi</p>
+
+<p><strong>Video URL:</strong> <a href="https://youtu.be/bVICOulH5IY">https://youtu.be/bVICOulH5IY</a></p>
+
+<p><strong>Summary:</strong> The talk focused on scaling tactics for Prometheus metrics collection. Using the story of Eva, a farmer who automated her operations with IoT devices, the speakers illustrated how to handle growing metric volumes and ensure system reliability using sharding strategies. The session emphasized starting simple and progressively adopting more complex solutions as needed.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction to the speakers</li>
+<li><code>01:05</code> - Prometheus Operator TLDR</li>
+<li><code>02:45</code> - User Story Example: Eva integrated IoT devices into her family farm to automate and optimize operations. Eva's setup evolved as the scale of her data collection increased, requiring more sophisticated management and scaling solutions.</li>
+<li><code>07:35</code> - Sharding Strategies</li>
+<li><code>12:50</code> - Sharding Challenges</li>
+<li><code>14:35</code> - User Story Example continues, Eva will use the sharding feature by Prometheus Operator but she now has circumstances which causes spikes in exposed metrics which will OOMKill some Prometheus'. Solution: Shard Autoscaling</li>
+<li><code>17:05</code> - Recap &amp; Summary</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>Prometheus Operator manages Prometheus setups on Kubernetes. It uses Custom Resource Definitions (CRDs) like Pod Monitors and Service Monitors to abstract k8s service discovery (SD). New CRDs like the "Scrape Config" are being introduced to mimic complete Prometheus configurations.</li>
+<li>Vertical scaling (increasing resources of a single instance) might be sufficient initially. However, as limits are reached, horizontal scaling (adding more instances) becomes necessary. This involves more complex configurations but offers greater flexibility and reliability.</li>
+<li>Sharding Strategies: Functional Sharding is grouping similar metric targets under separate Prometheus instances, achieved via namespace selectors or label selectors within Prometheus Operator. Hash Mod Sharding is using relabeling functions to distribute metrics across different instances based on hash values.</li>
+</ul>
+
+<h3>Questions/Discussion Points**</h3>
+
+<ul>
+<li>In what use cases and scenarios is it good to use the Prometheus Operator? What is it's competitors?</li>
+<li>It was mentioned to utilize tools like Thanos for queries across multiple data sources and for efficient data handling in large-scale environments. Should look into Thanos and its UCs. Can it be used without Prometheus Operator?</li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>

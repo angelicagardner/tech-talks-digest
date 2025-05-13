@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Dude, Where’s My Error?: How OpenTelemetry Records Errors, and Why...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Dude, Where’s My Error?: How OpenTelemetry Records Errors, and Why..." />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Tech Talks Digest</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Dude, Where’s My Error?: How OpenTelemetry Records Errors, and Why...</h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">observability</span>, 
+                
+                <span class="label">opentelemetry</span>
+                
+            </p>
+            <div class="content">
+                <h1>Dude, Where’s My Error?: How OpenTelemetry Records Errors, and Why...</h1>
+
+<p><strong>Speaker(s):</strong> Adriana Villela, ServiceNow Cloud Observability &amp; Reese Lee, New Relic</p>
+
+<p><strong>Video URL:</strong> https://www.youtube.com/watch?v=mfIaqvPHAjE</p>
+
+<p><strong>Summary:</strong> The talk explores how OpenTelemetry standardizes error handling across different programming languages and observability backends. The speakers explain the differences between errors and exceptions, how they are represented in spans and logs, and how context propagation ensures traceability across distributed systems. A demo showcases how errors are visualized in tools like Jaeger and other observability platforms.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction to the Speakers</li>
+<li><code>01:45</code> - Table of Contents for the Talk</li>
+<li><code>02:30</code> - Background on why we need a standardized way to capture telemetry and errors</li>
+<li><code>03:50</code> - Errors vs Exceptions</li>
+<li><code>05:15</code> - Error Handling in OTel</li>
+<li><code>07:20</code> - Record Errors using Spans</li>
+<li><code>11:00</code> - Record Errors using Logs</li>
+<li><code>12:00</code> - Which is better: Spans or Logs?</li>
+<li><code>14:30</code> - Demo</li>
+<li><code>24:00</code> - Wrap up</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>Languages handle errors and exceptions differently e.g., Go lacks exceptions, while Java and Python use structured exception handling</li>
+<li>OTel provides a standardized way to capture errors. Errors can be recorded using spans and logs. Spans represent individual units of work enriched with metadata, attributes, status codes and events. Logs are structured point-in-time messages correlted with traces for debugging. Whether to use spans or logs depends on team preference, backend support, and trace-log correlation capabilities.</li>
+<li>Context propagation ties together spans and logs across distributed systems.  </li>
+<li>Different observability tools interpret spans, logs, and events uniquely. E.g. span events might be treated as logs in Jaeger, but as dedicated signals in other backends.</li>
+</ul>
+
+<h2>Links/Resources</h2>
+
+<ul>
+<li>Demo repo: https://github.com/avillela/otel-errors-talk</li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>

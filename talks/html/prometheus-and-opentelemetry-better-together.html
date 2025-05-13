@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Prometheus and OpenTelemetry: Better Together</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Prometheus and OpenTelemetry: Better Together" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Tech Talks Digest</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Prometheus and OpenTelemetry: Better Together</h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">observability</span>, 
+                
+                <span class="label">opentelemetry</span>, 
+                
+                <span class="label">prometheus</span>
+                
+            </p>
+            <div class="content">
+                <h1>Prometheus and OpenTelemetry: Better Together</h1>
+
+<p><strong>Speaker(s):</strong> Adriana Villela, Reese Lee</p>
+
+<p><strong>Video URL:</strong> https://www.youtube.com/watch?v=LJd1pJ0k28g</p>
+
+<p><strong>Summary:</strong> Prometheus is used for monitoring and alerting while OpenTelemetry provides a broader observability framework including metrics, traces, and logs. This talk centers on how these tools complement each other.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Presentation of speakers</li>
+<li><code>01:10</code> - Introduction of the talk</li>
+<li><code>03:25</code> - Brief refresher on OpenTelemetry Collector and Prometheus</li>
+<li><code>06:00</code> - Prometheus Receiver, Prometheus Exporter and Prometheus Remote Write exporter</li>
+<li><code>08:40</code> - OTel Target Allocator</li>
+<li><code>15:20</code> - Introducing the demo; setup in k8s. Python app emits Prometheus metrics to be ingested by an OTel Collector. And with help of the Target Allocator it transfers the data as OTLP metrics to the Collector's Stdout (using the Logging Exporter)</li>
+<li><code>26:10</code> - Additional OpenTelemetry components</li>
+<li><code>28:00</code> - Wrap up</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>OpenTelemetry acts as a vendor-neutral way to collect and process data to be exported to various backends including Prometheus. The Prometheus Receiver and Exporter components allow for collecting metrics exposed by Prometheus and exporting them back into Prometheus or other compatible backends.</li>
+<li>The Target Allocator component helps to distribute the scraping load among multiple Prometheus instances to address scalability and performance issues. It helps in the even distribution of scraping tasks and resource allocation (crucial in large-scale deployments).</li>
+<li>Pros: leverage monitoring and alerting capabilities of Prometheus while take advantage of instrumentation and flexibility offered by OpenTelemetry. This integrations allows for a comprehensive observability strategy which can include tracing and logging alongside metrics monitoring.</li>
+<li>Cons: the integration introduces complexity regarding configuration and management of two systems. Learning curve can be steep for teams, and operational overhead might increase, i.e. the time, effort, and resources required to manage and maintain the systems.</li>
+</ul>
+
+<h3>Questions/Discussion Points**</h3>
+
+<ul>
+<li>Some of the challenges with Prometheus raised here have been address by projects like Prometheus Operator, Thanos, Cortex, ...</li>
+<li>Is perhaps OpenTel an attractive solution for those needing more observability than just metrics?</li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
