@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Shift Into an Observability Mindset with OpenTelemetry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Shift Into an Observability Mindset with OpenTelemetry" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Tech Talks Digest</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Shift Into an Observability Mindset with OpenTelemetry</h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">observability</span>, 
+                
+                <span class="label">opentelemetry</span>
+                
+            </p>
+            <div class="content">
+                <h1>Shift Into an Observability Mindset with OpenTelemetry</h1>
+
+<p><strong>Speaker(s):</strong> Daniel Gomez Blanco</p>
+
+<p><strong>Video URL:</strong> https://www.youtube.com/watch?v=_0AorR5JUS8</p>
+
+<p><strong>Summary:</strong> This talk is about explaining that in today’s complex, distributed systems you can no longer debug by intuition and isolated metrics alone - you need rich, standards-based context propagated end‐to‐end. By adopting OpenTelemetry’s unified model for metrics, traces and logs, teams gain data ("evidence") instead of guesswork and can correlate user experience across services.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction to the Talk and Speaker</li>
+<li><code>02:10</code> - Debuggning without context makes it difficult to connect the dots</li>
+<li><code>04:00</code> - With context and correlation we have evidence and everyone can be on the same page</li>
+<li><code>06:30</code> - Trace Sampling (Head / Tail) allows to only keep the most useful data</li>
+<li><code>09:30</code> - Use each signal of your telemetry data for its intended purpose (Metrics vs Traces vs Logs)</li>
+<li><code>12:30</code> - Metric Views to control metric streams</li>
+<li><code>14:00</code> - Communicate value to the Leadership</li>
+<li><code>17:05</code> - Change the engineer mindset for cross-organisation alignment</li>
+<li><code>20:30</code> - Takeaway points</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>By propagating OpenTelemetry’s trace context end-to-end we get concrete evidence rather than relying on hunches when debugging.</li>
+<li>Leverage metrics, traces, and logs for their intended purposes but also correlate them via exemplars and semantic conventions.</li>
+<li>Use head sampling for low-overhead probabilistic trace capture, and tail sampling (via a collector) to focus on the most interesting traces (errors, high-latency) without losing end-to-end context.</li>
+<li>Keep metrics cardinality low and use “metric views” at runtime to reshape or filter out unbounded labels, ensuring performant long-term storage and querying.</li>
+<li>Use telemetry to prove ROI and guide leadership decisions by tying service-level indicators (SLIs/SLOs) back to real user-experience and business KPIs.</li>
+<li>We learn by doing so it's a good idea to guide engineers to adoption through live labs or “observability game days,” making it easy—and fun—for to experience the value of context-driven debugging.</li>
+</ul>
+
+<h3>Questions/Discussion Points</h3>
+
+<ul>
+<li>Easy talk to follow along, kind of like an overview/intro to OpenTelemetry’s APIs and SDKs. I would say the recommended audience is Platform/SRE/DevOps engineers who want to move from ad-hoc metrics to a unified, standards-based approach - or engineering leads/architects looking to align multiple teams around a common telemetry model.</li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
