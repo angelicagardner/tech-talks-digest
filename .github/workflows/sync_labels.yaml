@@ -40,3 +40,8 @@ jobs:
           } else {
             console.log("Pull request body is null or undefined.");
           }
+
+    - name: Random RickRoll
+      uses: TejasvOnly/random-rickroll@v1.0
+      with:
+          percentage: 25
