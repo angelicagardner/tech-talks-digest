@@ -21,7 +21,7 @@ year: 1989
 
 - ...
 
-### Questions/Discussion Points
+## Questions/Discussion Points
 
 - ...
 
