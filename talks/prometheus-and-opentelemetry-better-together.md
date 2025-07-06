@@ -30,7 +30,7 @@ year: 2024
 - Pros: leverage monitoring and alerting capabilities of Prometheus while take advantage of instrumentation and flexibility offered by OpenTelemetry. This integrations allows for a comprehensive observability strategy which can include tracing and logging alongside metrics monitoring.
 - Cons: the integration introduces complexity regarding configuration and management of two systems. Learning curve can be steep for teams, and operational overhead might increase, i.e. the time, effort, and resources required to manage and maintain the systems.
 
-### Questions/Discussion Points**
+## Questions/Discussion Points
 
 - Some of the challenges with Prometheus raised here have been address by projects like Prometheus Operator, Thanos, Cortex, ...
 - Is perhaps OpenTel an attractive solution for those needing more observability than just metrics?
