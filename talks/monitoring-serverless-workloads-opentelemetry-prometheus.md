@@ -33,6 +33,6 @@ year: 2024
 - Google introduced sidecars and lifecycle dependencies in Cloud Run to improve observability.
 - Ongoing efforts include reducing resource overhead and addressing CPU throttling issues.
 
-### Questions/Discussion Points
+## Questions/Discussion Points
 
 - These were the changes done in Cloud Run to accommodate o11y - what about other serverless services?
