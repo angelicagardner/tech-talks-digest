@@ -35,7 +35,7 @@ year: 2021
 - YAML linter should be used in dev environment to catch formatting errors directly; and then
 - Integrate k8s validation tools in CI/CD pipelines.
 
-### Questions/Discussion Points
+## Questions/Discussion Points
 
 - Alternatives for when working with Helm: plugins for kubeval and conftest. (not Kubeconform yet)
 
