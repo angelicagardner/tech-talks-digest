@@ -33,7 +33,7 @@ year: 2024
 - Application Papers demonstrate innovative uses of AI in various fields, showing practical implementations.
 - Experimental Papers focus on experiments and results, offering insights through empirical studies.
 
-### Questions/Discussion Points**
+## Questions/Discussion Points
 
 - Very benenficial divison of different types of papers and how to spot them, but there are (IMO) better examples of demonstrating how to approach reading research papers (in general, not particularly in AI/CS fields), .e.g: [How To Read A Paper Quickly & Effectively With AI](https://youtu.be/0w61Ou-F5vo?si=A4iUD4JN3NJTjtri) in 08:20 minutes, [How to read a research paper | Luís and João Batalha and Lex Fridman](https://youtu.be/LG1e6c5mRz0?si=Iq83I4KAfEx_Dnrp) in 06:16 minutes, [Become an AI Expert by Reading Like a Pro](https://youtu.be/x6slke5niqw?si=mgimYdGjAbedUkuP) in 08:16 minutes.
 
