@@ -33,6 +33,6 @@ year: 2024
 - Use telemetry to prove ROI and guide leadership decisions by tying service-level indicators (SLIs/SLOs) back to real user-experience and business KPIs.
 - We learn by doing so it's a good idea to guide engineers to adoption through live labs or “observability game days,” making it easy—and fun—for to experience the value of context-driven debugging.
 
-### Questions/Discussion Points
+## Questions/Discussion Points
 
 - Easy talk to follow along, kind of like an overview/intro to OpenTelemetry’s APIs and SDKs. I would say the recommended audience is Platform/SRE/DevOps engineers who want to move from ad-hoc metrics to a unified, standards-based approach - or engineering leads/architects looking to align multiple teams around a common telemetry model.
