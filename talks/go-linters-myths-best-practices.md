@@ -42,7 +42,7 @@ year: 2019
   - Running linters is too slow
   - It's too late to introduce linters to already big projects
 
-### Questions/Discussion Points
+## Questions/Discussion Points
 
 - What configurations are commonly used for .golangci.yml - or is the default most common? Is the default "enough"?
 
