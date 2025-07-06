@@ -28,7 +28,7 @@ year: 2024
 - Vertical scaling (increasing resources of a single instance) might be sufficient initially. However, as limits are reached, horizontal scaling (adding more instances) becomes necessary. This involves more complex configurations but offers greater flexibility and reliability.
 - Sharding Strategies: Functional Sharding is grouping similar metric targets under separate Prometheus instances, achieved via namespace selectors or label selectors within Prometheus Operator. Hash Mod Sharding is using relabeling functions to distribute metrics across different instances based on hash values.
 
-### Questions/Discussion Points**
+## Questions/Discussion Points
 
 - In what use cases and scenarios is it good to use the Prometheus Operator? What is it's competitors?
 - It was mentioned to utilize tools like Thanos for queries across multiple data sources and for efficient data handling in large-scale environments. Should look into Thanos and its UCs. Can it be used without Prometheus Operator?
