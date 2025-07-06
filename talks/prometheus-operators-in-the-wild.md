@@ -33,6 +33,6 @@ year: 2024
 - Choose the Prometheus Operator for a full-featured self-managed stack; choose GMP Operator for a lightweight, managed collection agent in cloud-native environments.
 - GMP Operator is an agent-only scraper ("collection-focused") which means that it collects metrics and remote-write them to whatever long-term storage or managed Prometheus service you’ve chosen, but it leaves the storage, querying, alerting, and UI entirely to that downstream system.
 
-### Questions/Discussion Points
+## Questions/Discussion Points
 
 - It would be interesting to compare with other operator patterns such as OpenTelemetry Collector (as a Prometheus scraper), Thanos Operator / Cortex Operator (deploy Prometheus instances alongside long-term storage backends) or Cluster Monitoring Operator (the de-facto way in OpenShift) which is built on top of the Prometheus Operator and adds cluster-wide defaults and multi-tenant isolation. 
