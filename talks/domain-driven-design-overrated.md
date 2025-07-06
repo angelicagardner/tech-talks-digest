@@ -35,6 +35,6 @@ year: 2021
 - Alternatives to DDD can be: using an RDBMS, UX/UI-driven design that evolves from user experiments, using mathematical/functional models to generalize/abstract domain models, or be purely model-driven and create technology-independent models.
 - Implementation strategy can differ depending on the bounded context of your project, e.g. OrderMgmt (bc) is UX-driven while Accounting (bc) is has a Relational strategy and Fulfilment (bc) is tactical DDD.
 
-### Questions/Discussion Points
+## Questions/Discussion Points
 
 - He mentions it's common among developers to have "domain allergy" i.e. preferring to explore cool technology to being bothered by learning domain concepts. I wonder if this has to do with personality, age - or is it generic? Can it be somewhat prevented through stronger product ownership?
