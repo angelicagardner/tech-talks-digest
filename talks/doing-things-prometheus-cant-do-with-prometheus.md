@@ -43,6 +43,6 @@ year: 2019
 - Exporters should use "ConstMetrics" pattern to avoid stale metric issues from ephemeral values. Centralize and standardize custom exporters to replace ad-hoc monitoring scripts.
 - Group and route alerts smartly (e.g., critical to pager, debug to Slack). Maintain alert context and write playbooks to act on alerts.
 
-### Questions/Discussion Points
+## Questions/Discussion Points
 
 - This talk is from 2019 and now in 2025 with the launch of Prometheus 3.x, some limitations mentioned have been improved. E.g. better query performance, support for native histograms (for better cardinality handling), and more efficient long-term storage with block eviction. However, Prometheus is still not a distributed system and HA setups still require external tools.
