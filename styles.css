@@ -88,3 +88,8 @@ select:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
 }
+
+footer {
+  margin-top: 1em;
+  text-align: center;
+}
