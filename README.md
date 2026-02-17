@@ -66,3 +66,7 @@ I monitor the following channels to identify talks for synthesis:
 | [GOTO Conferences](https://www.youtube.com/@GOTO-) | 🌎 | Software Architecture & Tech Leadership |
 | [InfoQ](https://www.youtube.com/@infoq) | 🌎 | High-level System Design, Architecture Trends, Engineering Leadership |
 | [PyCon US](https://www.youtube.com/@PyConUS) | 🇺🇸 | CPython Internals, Language Evolution, MLOps & AI Infrastructure, Scalable Web Systems |
+
+## Disclaimer
+
+This repository is licensed under the [MIT License](LICENSE). All original conference talks, videos and links referenced in this repository are the intellectual property of their respective authors, speakers, and organizations. The summaries and "Key Takeaways" provided are my personal study notes and interpretations. They are intended for educational and research purposes under "Fair Use" principles. This repository does not host or redistribute original copyrighted files (video files).
