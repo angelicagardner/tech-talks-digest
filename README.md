@@ -24,7 +24,7 @@ All talk summaries are stored in the `/talks` directory and rendered as an table
 
 ## Label System
 
-The repository uses labels to categorize papers consistently:
+The repository uses labels to categorize talks consistently:
 
 ### 1. Talk Category 🟦
 
