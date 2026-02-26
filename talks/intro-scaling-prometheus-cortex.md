@@ -36,7 +36,7 @@ year: 2020
 
 - This talk is a few years old and even though Cortex is a "Graduated" CNCF project, stable and reliable, the industry seems to have shifted its focus to Grafana Mimir, VictoriaMetrics and Thanos.
 - Cortex and its peers now natively ingest OpenTelemetry (OTLP) so we aren't limited to Prometheus metrics anymore.
-- The old "Chunks" storage (DynamoDB/Cassandra) that is mentioned in the talk is considered legacy now and we use Object Storage (S3/GCS) because it is cheaper and scales better.
+- The "Chunks" storage (DynamoDB/Cassandra) that is mentioned in the talk is considered legacy now and we use Object Storage (S3/GCS) because it is cheaper and scales better.
 
 ## Links/Resources
 
