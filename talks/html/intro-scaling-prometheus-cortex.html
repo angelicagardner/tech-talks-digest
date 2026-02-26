@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Intro to Scaling Prometheus with Cortex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Intro to Scaling Prometheus with Cortex" />
+    <link href="../../styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1><a href="https://angelicagardner.github.io/tech-talks-digest/">Back to Main Table</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Intro to Scaling Prometheus with Cortex</h2>
+            <p><strong>Year:</strong> 2020</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">prometheus</span>, 
+                
+                <span class="label">cortex</span>, 
+                
+                <span class="label">monitoring</span>
+                
+            </p>
+            <div class="content">
+                <h1>Intro to Scaling Prometheus with Cortex</h1>
+
+<p><strong>Speaker(s):</strong> Tom Wilkie, Grafana Labs &amp; Ken Haines, Microsoft</p>
+
+<p><strong>Video URL:</strong> https://youtu.be/oHGoZd-9jWA</p>
+
+<p><strong>Summary:</strong> Cortex is a horizontally scalable, push-based backend that allows multiple Prometheus instances to aggregate metrics into a single, multi-tenant cluster for global observability. It eliminates the vertical scaling limits and security hurdles of traditional federation by using distributed systems logic and cost-effective object storage for long-term data retention.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction to Speakers and Agenda</li>
+<li><code>01:15</code> - Prometheus Model &amp; Grafana</li>
+<li><code>04:30</code> - Prometheus' Answer to Global Observability = Federation</li>
+<li><code>07:10</code> - Why Cortex?</li>
+<li><code>08:15</code> - About Cortex</li>
+<li><code>11:00</code> - History of Cortex</li>
+<li><code>14:15</code> - Demo: Collecting metrics from various Prometheus instances and send to a Central Cortex installation to do global aggregates and reports via Grafana</li>
+<li><code>19:15</code> - Outro</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>Prometheus is designed to be co-located with the jobs it monitors (pull-based). This becomes difficult to manage when software is deployed across multiple disparate regions or clusters.</li>
+<li>Standard Prometheus federation requires edge servers to be exposed for scraping (security risk), scales vertically (limited by single-node RAM), and often requires complex pre-aggregation to avoid overwhelming the central server.</li>
+<li>Cortex can be scaled out by adding more nodes to handle increased cardinality and ingestion rates (Horizontal Scalability).</li>
+<li>Cortex uses Prometheus’s remote_write feature. Edge Prometheus instances push data to the central Cortex cluster, eliminating the need to open firewall ports at the edge for pulling metrics.</li>
+<li>Through a Distributed Hash Table (DHT) and replication, Cortex ensures there are no gaps in data even if individual nodes fail.</li>
+<li>Cortex offloads data to object stores like Amazon S3, Google Bigtable, or Cassandra.</li>
+</ul>
+
+<h2>Questions/Discussion Points</h2>
+
+<ul>
+<li>This talk is a few years old and even though Cortex is a "Graduated" CNCF project, stable and reliable, the industry seems to have shifted its focus to Grafana Mimir, VictoriaMetrics and Thanos.</li>
+<li>Cortex and its peers now natively ingest OpenTelemetry (OTLP) so we aren't limited to Prometheus metrics anymore.</li>
+<li>The "Chunks" storage (DynamoDB/Cassandra) that is mentioned in the talk is considered legacy now and we use Object Storage (S3/GCS) because it is cheaper and scales better.</li>
+</ul>
+
+<h2>Links/Resources</h2>
+
+<ul>
+<li><a href="https://github.com/cortexproject/cortex">Cortex on GitHub</a></li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+</html>
