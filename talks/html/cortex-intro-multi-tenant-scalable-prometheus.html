@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Cortex Intro: Multi-Tenant Scalable Prometheus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Cortex Intro: Multi-Tenant Scalable Prometheus" />
+    <link href="../../styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1><a href="https://angelicagardner.github.io/tech-talks-digest/">Back to Main Table</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Cortex Intro: Multi-Tenant Scalable Prometheus</h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">prometheus</span>, 
+                
+                <span class="label">cortex</span>, 
+                
+                <span class="label">monitoring</span>
+                
+            </p>
+            <div class="content">
+                <h1>Cortex Intro: Multi-Tenant Scalable Prometheus</h1>
+
+<p><strong>Speaker(s):</strong> Ben Ye, Amazon Web Services &amp; Friedrich Gonzalez, Adobe</p>
+
+<p><strong>Video URL:</strong> https://youtu.be/by538PPSPQ0</p>
+
+<p><strong>Summary:</strong> This talk provides an overview of Cortex which is a CNCF incubating project designed as a horizontally scalable, multi-tenant, long-term storage solution for Prometheus. The speakers describes how Cortex handles high-cardinality metrics by utilizing an API-driven architecture that separates read and write paths, and they introduce the newest features (from version 1.13).</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction to Speakers and Cortex</li>
+<li><code>01:45</code> - The Problem with Scaling Prometheus</li>
+<li><code>03:20</code> - What Cortex Does Differently</li>
+<li><code>04:35</code> - Cortex Key Features</li>
+<li><code>06:15</code> - Architecture</li>
+<li><code>08:15</code> - Working in the CNCF Ecosystem</li>
+<li><code>09:00</code> - New Features &amp; Improvements</li>
+<li><code>23:00</code> - A Thanks to Contributors and Highlight some PRs</li>
+<li><code>23:20</code> - Demo</li>
+<li><code>27:45</code> - Outro</li>
+<li><code>28:30</code> - Q&amp;A</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li>Cortex solves the "memory-heavy" limitation of standard Prometheus by providing a central API to ingest, store, and query metrics across many instances with built-in multi-tenancy and isolation.</li>
+<li>Metrics are sent via "Remote Write" to Distributors, which pass data to Ingesters. It uses a replication factor of 3 to ensure high availability; data is eventually compacted and shipped to long-term block storage like Amazon S3. Store Gateways handle the retrieval of older data from the bucket storage for long-term queries.</li>
+<li>The Query Frontend and Scheduler manage incoming requests, providing result caching and splitting to speed up performance.</li>
+<li>Cortex now supports OTLP (OpenTelemetry Protocol) ingestion directly. It also supports Native Histograms.</li>
+<li>Cortex vs. Thanos: While both projects share code and goals, the speakers suggest Cortex is often the better choice for platform teams needing strict multi-tenant limits and centralized management, whereas Thanos is traditionally preferred for simpler, sidecar-based federation.</li>
+</ul>
+
+<h2>Questions/Discussion Points</h2>
+
+<ul>
+<li>See my questions/discussion points <a href="https://github.com/angelicagardner/tech-talks-digest/blob/main/talks/intro-scaling-prometheus-cortex.md">in this related talk</a>.</li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+</html>
