@@ -17,7 +17,7 @@ year: 2024
 - `00:00` - Introduction to the Talk & Speaker
 - `01:22` - Cloudflare's Thanos Journey
 - `05:20` - Tooling Developed to Handle the Situation & Improve the UX
-- `00:00` - Storage
+- `06:15` - Storage
 - `00:00` - 
 
 ## Key Takeaways
