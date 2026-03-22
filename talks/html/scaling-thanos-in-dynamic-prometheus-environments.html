@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Monitoring the World: Scaling Thanos in Dynamic Prometheus Environments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Monitoring the World: Scaling Thanos in Dynamic Prometheus Environments" />
+    <link href="../../styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1><a href="https://angelicagardner.github.io/tech-talks-digest/">Back to Main Table</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Monitoring the World: Scaling Thanos in Dynamic Prometheus Environments</h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">monitoring</span>, 
+                
+                <span class="label">prometheus</span>, 
+                
+                <span class="label">thanos</span>
+                
+            </p>
+            <div class="content">
+                <h1>Monitoring the World: Scaling Thanos in Dynamic Prometheus Environments</h1>
+
+<p><strong>Speaker(s):</strong> Colin Douch, Cloudflare</p>
+
+<p><strong>Video URL:</strong> https://youtu.be/ofhvbG0iTjU?si=be7Df_-4ryWneqiZ</p>
+
+<p><strong>Summary:</strong> Cloudflare scaled their Thanos metrics stack to 600+ data centers by moving to R2 storage and automating bucket creation for every new site. They optimized performance by running resource-heavy compaction on idle edge CPUs during off-peak hours and using a custom proxy to prevent slow, global queries.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction to the Talk &amp; Speaker</li>
+<li><code>01:22</code> - Cloudflare's Thanos Journey</li>
+<li><code>05:20</code> - Tooling Developed to Handle Scaling &amp; Improve UX</li>
+<li><code>06:15</code> - Storage</li>
+<li><code>12:10</code> - Compactors</li>
+<li><code>14:35</code> - Stores</li>
+<li><code>17:15</code> - Queries</li>
+<li><code>20:20</code> - Outro with Q&amp;A</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li><p>Cloudflare moved from Nagios/OpenTSDB to Prometheus and Thanos in 2018.</p></li>
+<li><p>They abandoned OpenTSDB primarily because they lacked Java expertise and found the Hadoop/HBase stack difficult to maintain.</p></li>
+<li><p>Initial Scale (2018): ~100 data centers, &lt;1 billion active time series. Current Scale: 600+ data centers, 1,000+ sidecars, 50TB+ metrics daily, and 50 petabytes of long-term storage.</p></li>
+<li><p>Storage: Internal Ceph storage was unmaintained and centralized. Migrated to Cloudflare R2 (S3-compatible object storage). Since Thanos sidecars only allow one upload per block, they patched Thanos to allow configurable metadata filenames. This let them run two sidecars simultaneously to dual-write to both Ceph and R2 during the transition.</p></li>
+<li><p>Compactors: Run on bare-metal edge nodes using Nomad. They run compaction jobs as "Chron" tasks during night. Compactor is a background worker that merges Prometheus' 2-hour metrics blocks into larger blocks, e.g. 2 weeks, to reduce the number of files.</p></li>
+<li><p>Stores: For optimal SLOs, a single Thanos store should handle roughly 5 terabytes of data blocks. They built a tool called "Store Sinker" that automatically chunks buckets into 5TB segments and provisions a dedicated store for each chunk.</p></li>
+<li><p>Queries: By default, Thanos queries every store API it knows, meaning a query is only as fast as the slowest connected data center. So they built a Label Enforcer reverse proxy to enforce including an "external label", e.g. data center name or region.</p></li>
+</ul>
+
+<h2>Questions/Discussion Points</h2>
+
+<ul>
+<li>Speaker mentions they want to meet a "decently respectable set of SLOs", what could they be? Query latency? Availability/Up-time? Data freshness (how quickly data is available in long-term storage)? Retention integrity?</li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+</html>
