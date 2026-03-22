@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>eBPF’s Abilities and Limitations: The Truth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# eBPF’s Abilities and Limitations: The Truth" />
+    <link href="../../styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1><a href="https://angelicagardner.github.io/tech-talks-digest/">Back to Main Table</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>eBPF’s Abilities and Limitations: The Truth</h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">ebpf</span>, 
+                
+                <span class="label">cloud native</span>, 
+                
+                <span class="label">linux</span>
+                
+            </p>
+            <div class="content">
+                <h1>eBPF’s Abilities and Limitations: The Truth</h1>
+
+<p><strong>Speaker(s):</strong> Liz Rice &amp; John Fastabend, Isovalent</p>
+
+<p><strong>Video URL:</strong> https://youtu.be/tClsqnZMN6I</p>
+
+<p><strong>Summary:</strong> eBPF is no longer restricted by its early limitations and has evolved into a flexible tool capable of advanced operations, such as Layer 7 protocol parsing. This talk explains how modern features like timer callbacks, subprograms, and improved looping allow for complex tasks while maintaining system safety through the verifier.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction to the Talk &amp; Speakers</li>
+<li><code>01:30</code> - What's Possible with eBPF?</li>
+<li><code>02:40</code> - Turing (in)completeness</li>
+<li><code>06:40</code> - eBPF verifier</li>
+<li><code>10:50</code> - Conway's Game of Life Demo</li>
+<li><code>13:10</code> - Limitations</li>
+<li><code>15:40</code> - Evolution of Looping</li>
+<li><code>19:10</code> - Subprograms</li>
+<li><code>21:10</code> - BPF execution termination</li>
+<li><code>23:10</code> - Memory allocation</li>
+<li><code>26:30</code> - Are the Statements about Limitations still True?</li>
+<li><code>28:50</code> - Outro</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li><p>While eBPF is technically bounded for safety, it is practically powerful enough to perform arbitrarily complex tasks (turing complete).</p></li>
+<li><p>eBPF verifier originally limited programs to 4,000 instructions but modern kernels allow up to 1 million instructions per subprogram and with the ability to chain subprograms together.</p></li>
+<li><p>The verifier's primary job is ensuring memory safety, preventing kernel crashes, and making sure no program hangs the CPU indefinitely.</p></li>
+<li><p>eBPF now supports bounded loops and timer callbacks that allow a program to hand over the CPU and resume later.</p></li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+</html>
