@@ -22,6 +22,7 @@ year: 2024
 - `10:20` - Round 3: Metrics
 - `12:00` - Round 4: Traces
 - `13:10` - Performance Tests
+- `00:00` - 
 
 ## Key Takeaways
 
@@ -33,7 +34,9 @@ year: 2024
 
 - Fluent Bit acts as a proxy/gateway; only supports OTLP/HTTP (no gRPC). While OTel Operator has full processing, sampling, and multi-protocol support.
 
-- Round 1 (Design) was quite equal, Round 2 (Logging) Fluent Bit won, Round 3 (Metrics) won by OTel Collector, Round 4 (Traces) won by OTel Collector.
+- Performance Tests pipelines: (1) Collection of logs, traces and metrics, (2) Collection of logs, traces and metrics with processing at the receiver, and (3) Collection of logs, traces and metrics with processing after receiving.
+
+- Round 1 (Design) was quite equal, Round 2 (Logging) Fluent Bit wins, Round 3 (Metrics) OTel Collector wins, Round 4 (Traces) won by OTel Collector.
 
 ## Questions/Discussion Points
 
@@ -42,3 +45,7 @@ year: 2024
 - Fluent Bit has historically focused on logging but recently added support for metrics and traces (v2.x/3.0). OTel Collector has native support for traces and metrics, with logs being the more recent addition. What will be these business roadmaps moving forward, will them meet/become more and more similar?
 
 - A fun way to make the presentation/comparison engaging :)
+
+## Links
+
+- [Performance Tests Repo](https://github.com/isItObservable/fluentbit-vs-collector)
