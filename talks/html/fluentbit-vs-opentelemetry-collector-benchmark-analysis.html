@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Telemetry Showdown: Fluent Bit Vs. OpenTelemetry Collector - a Comprehensive Benchmark Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="# Telemetry Showdown: Fluent Bit Vs. OpenTelemetry Collector - a Comprehensive Benchmark Analysis" />
+    <link href="../../styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1><a href="https://angelicagardner.github.io/tech-talks-digest/">Back to Main Table</a></h1>
+    </header>
+    <main>
+        <article>
+            <h2>Telemetry Showdown: Fluent Bit Vs. OpenTelemetry Collector - a Comprehensive Benchmark Analysis</h2>
+            <p><strong>Year:</strong> 2024</p>
+            <p><strong>Labels:</strong>
+                
+                <span class="label">cloud native</span>, 
+                
+                <span class="label">opentelemetry</span>, 
+                
+                <span class="label">observability</span>, 
+                
+                <span class="label">fluentbit</span>
+                
+            </p>
+            <div class="content">
+                <h1>Telemetry Showdown: Fluent Bit Vs. OpenTelemetry Collector - a Comprehensive Benchmark Analysis</h1>
+
+<p><strong>Speaker(s):</strong> Henrik Rexed, Dynatrace</p>
+
+<p><strong>Video URL:</strong> https://youtu.be/ykq1F_3PmJw?si=ARY7R3PGHjwIwHvk</p>
+
+<p><strong>Summary:</strong> The speaker benchmarks Fluent Bit and the OpenTelemetry Collector to help engineers choose the right agent for their observability needs. Fluent Bit is an incredibly lightweight and powerful specialist for high-speed log parsing, while the OTel Collector is the superior choice for managing complex metrics and traces due to its advanced transformation and cardinality reduction capabilities.He recommends using Fluent Bit for log-centric edge cases, and the OTel Collector, ideally paired with a Target Allocator to ensure memory stability, for comprehensive, full-stack telemetry pipelines.</p>
+
+<h2>Timestamps</h2>
+
+<ul>
+<li><code>00:00</code> - Introduction to Talk &amp; Speaker</li>
+<li><code>01:10</code> - Disclaimer</li>
+<li><code>01:50</code> - The Fight &amp; Players</li>
+<li><code>03:45</code> - Round 1: Design</li>
+<li><code>08:40</code> - Round 2: Logging</li>
+<li><code>10:20</code> - Round 3: Metrics</li>
+<li><code>12:00</code> - Round 4: Traces</li>
+<li><code>13:10</code> - Performance Tests Overview</li>
+<li><code>15:25</code> - Rampup Test Results</li>
+<li><code>17:30</code> - Soak Test Results</li>
+<li><code>18:40</code> - The Target Allocator (provided by OTel Operator)</li>
+<li><code>20:10</code> - Where should we process our data?</li>
+<li><code>20:55</code> - Conclusion and Q&amp;A</li>
+</ul>
+
+<h2>Key Takeaways</h2>
+
+<ul>
+<li><p>Fluent Bit uses Tags to route data; very lightweight and concise configuration. - OTel Collector uses Connectors/Routing which are configuration files tend to be much larger.</p></li>
+<li><p>Fluent Bit has superior parsing incl. Regex, JSON, Lua, WASM.</p></li>
+<li><p>For metrics, Fluent Bit lacks scrape configs, relabeling, and cardinality reduction - while OTel Collector has full support for Prometheus scraping and cardinality management.</p></li>
+<li><p>Fluent Bit acts as a proxy/gateway; only supports OTLP/HTTP (no gRPC). While OTel Operator has full processing, sampling, and multi-protocol support.</p></li>
+<li><p>Performance Tests pipelines: (1) Collection of logs, traces and metrics, (2) Collection of logs, traces and metrics with processing at the receiver, and (3) Collection of logs, traces and metrics with processing after receiving.</p></li>
+<li><p>Round 1 (Design) was quite equal, Round 2 (Logging) Fluent Bit wins, Round 3 (Metrics) OTel Collector wins, Round 4 (Traces) won by OTel Collector.</p></li>
+<li><p>Fluent Bit showed a stable resource consumption curve (CPU and memory) as the number of logs and traces increased.</p></li>
+</ul>
+
+<h2>Questions/Discussion Points</h2>
+
+<ul>
+<li><p>The speaker explicitly stated that his performance benchmarks and comparisons were based on Fluent Bit version 2.x.</p></li>
+<li><p>Fluent Bit has historically focused on logging but recently added support for metrics and traces (v2.x/3.0). OTel Collector has native support for traces and metrics, with logs being the more recent addition. What will be these business roadmaps moving forward, will them meet/become more and more similar?</p></li>
+<li><p>A fun way to make the presentation/comparison engaging :)</p></li>
+</ul>
+
+<h2>Links</h2>
+
+<ul>
+<li><a href="https://github.com/isItObservable/fluentbit-vs-collector">Performance Tests Repo</a></li>
+</ul>
+
+            </div>
+        </article>
+    </main>
+</body>
+</html>
