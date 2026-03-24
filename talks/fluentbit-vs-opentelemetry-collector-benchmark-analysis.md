@@ -21,8 +21,12 @@ year: 2024
 - `08:40` - Round 2: Logging
 - `10:20` - Round 3: Metrics
 - `12:00` - Round 4: Traces
-- `13:10` - Performance Tests
-- `00:00` - 
+- `13:10` - Performance Tests Overview
+- `15:25` - Rampup Test Results
+- `17:30` - Soak Test Results
+- `18:40` - The Target Allocator (provided by OTel Operator)
+- `20:10` - Where should we process our data?
+- `20:55` - Conclusion and Q&A
 
 ## Key Takeaways
 
@@ -37,6 +41,8 @@ year: 2024
 - Performance Tests pipelines: (1) Collection of logs, traces and metrics, (2) Collection of logs, traces and metrics with processing at the receiver, and (3) Collection of logs, traces and metrics with processing after receiving.
 
 - Round 1 (Design) was quite equal, Round 2 (Logging) Fluent Bit wins, Round 3 (Metrics) OTel Collector wins, Round 4 (Traces) won by OTel Collector.
+
+- Fluent Bit showed a stable resource consumption curve (CPU and memory) as the number of logs and traces increased.
 
 ## Questions/Discussion Points
 
