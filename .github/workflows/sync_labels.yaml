@@ -6,42 +6,43 @@ on:
 
 jobs:
   sync-labels:
+    if: github.actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Sync Labels
-      uses: actions/github-script@v3
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          if (context.payload.pull_request.body) {
-            const issueNumberMatch = context.payload.pull_request.body.match(/#(\d+)/);
-            if (issueNumberMatch && issueNumberMatch[1]) {
-              const issue_number = issueNumberMatch[1];
-              const issue = await github.issues.get({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: issue_number,
-              });
-              const labels = issue.data.labels.map(label => label.name);
-              
-              await github.issues.addLabels({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
-                labels: labels
-              });
+      - name: Sync Labels
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            if (context.payload.pull_request.body) {
+              const issueNumberMatch = context.payload.pull_request.body.match(/#(\d+)/);
+              if (issueNumberMatch && issueNumberMatch[1]) {
+                const issue_number = issueNumberMatch[1];
+                const issue = await github.issues.get({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue_number,
+                });
+                const labels = issue.data.labels.map(label => label.name);
+
+                await github.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  labels: labels
+                });
+              } else {
+                console.log("No issue number found in the pull request body.");
+              }
             } else {
-              console.log("No issue number found in the pull request body.");
+              console.log("Pull request body is null or undefined.");
             }
-          } else {
-            console.log("Pull request body is null or undefined.");
-          }
 
-    - name: Random RickRoll
-      uses: TejasvOnly/random-rickroll@v1.0
-      with:
+      - name: Random RickRoll
+        uses: TejasvOnly/random-rickroll@v1.0
+        with:
           percentage: 25
